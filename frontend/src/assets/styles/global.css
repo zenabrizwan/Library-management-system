@@ -1,0 +1,461 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f0f8, #e6e6fa); /* Very light gray to light lavender */
+    color: #333;
+    min-height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg id='slash' fill='%23f8f8ff' fill-opacity='0.4'%3E%3Cpath d='M0 12h12v12H0V12zm24 24h12v12H24V36zm-12 0h12v12H12V36zm24-24h12v12H36V24zM12 0h12v12H12V0zm24 12h12v12H36V12z'/><path d='M12 24h12v12H12V24zm24 0h12v12H36V24zM0 36h12v12H0V36zm12-24h12v12H12V12zM24 0h12v12H24V0zm-12 24h12v12H12V24zm24-12h12v12H36V12zm-24 24h12v12H0V36zm12-24h12v12H12V12zM24 0h12v12H24V0zm-12 24h12v12H12V24zm24-12h12v12H36V12z' opacity='.1'/></g></g></svg>"); /* Diagonal lines pattern */
+    background-size: 60px 60px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f5f5ff; /* Very light lavender */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dcd0ff; /* Light true lavender border */
+  }
+  
+  header {
+    background: linear-gradient(to right, #b0e0e6, #add8e6); /* Light cyan to light blue (cooler tones) */
+    color: #333; /* Darker text for better contrast */
+    padding: 1.5em 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  }
+  
+  nav {
+    background-color: #e6e6fa; /* Light lavender nav */
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+    border-bottom: 2px solid #b0c4de; /* Light steel blue bottom border */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: #333; /* Darker text */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #f8f8ff; /* Very light gray on hover */
+    color: #8a2be2; /* Medium true lavender on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    background: linear-gradient(to right, #add8e6, #b0e0e6); /* Light blue to light cyan */
+    color: #333; /* Darker text */
+    text-align: center;
+    padding: 1.2em 0;
+    margin-top: 35px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #dcd0ff; /* Light true lavender border */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+  }
+  
+  .homepage {
+    text-align: center;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - (/* height of header + margin-bottom */ 50px + /* height of nav + margin-bottom */ 45px + /* height of footer + margin-top */ 47px)); /* Adjust values based on actual header/nav/footer heights and margins */
+    background-image: url('https://i.pinimg.com/736x/e6/76/72/e67672a5f517083d14d5b934e8ef8b6d.jpg'); /* Path to your image in the public folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  .homepage h1 {
+    color: #140a1e; /* Medium true lavender heading */
+    margin-bottom: 30px;
+    font-size: 2.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle text shadow */
+  }
+  
+  .homepage .buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .homepage .buttons a,
+  .homepage .buttons button {
+    background: linear-gradient(to bottom, #e6e6fa, #dcd0ff); /* Light to medium light true lavender */
+    color: #333; /* Darker text */
+    border: none;
+    border-radius: 10px;
+    padding: 14px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* For links */
+  }
+  
+  .homepage .buttons button:hover,
+  .homepage .buttons a:hover {
+    background: linear-gradient(to bottom, #dcd0ff, #e6e6fa); /* Medium light to light true lavender on hover */
+    color: #8a2be2; /* Medium true lavender on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-dashboard, .admin-dashboard {
+    padding: 30px;
+    background-color: #f8f8ff; /* Very light gray */
+    border-radius: 10px;
+    border: 1px solid #e6e6fa; /* Light lavender border */
+  }
+  
+  .user-dashboard h2, .admin-dashboard h2 {
+    color: #8a2be2; /* Medium true lavender heading */
+    border-bottom: 2px solid #dcd0ff; /* Light true lavender border */
+    margin-top: 0;
+    margin-bottom: 35px;
+    padding-bottom: 12px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.03); /* Very subtle text shadow */
+  }
+  
+  .announcement-banner {
+    background-color: #e6e6fa; /* Light lavender */
+    color: #8a2be2; /* Medium true lavender text */
+    padding: 14px;
+    margin-bottom: 22px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+    border-left: 5px solid #b0c4de; /* Light steel blue accent border */
+  }
+  
+  .search-bar {
+    margin-bottom: 30px;
+  }
+  
+  .search-bar input[type='text'] {
+    padding: 14px;
+    border: 1px solid #dcd0ff; /* Light true lavender border */
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05); /* Very subtle inner shadow */
+    font-size: 1.1em;
+  }
+  
+  .books-list, .book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .book-card, .book-card-admin {
+    border: 1px solid #dcd0ff; /* Light true lavender border */
+    padding: 22px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+  }
+  
+  .book-card h3, .book-card-admin h4 {
+    color: #8a2be2; /* Medium true lavender heading in card */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+  }
+  
+  .book-card p, .book-card-admin p {
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .book-card .available {
+    color: #4caf50;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.03); /* Very subtle text shadow */
+  }
+  
+  .book-card .not-available {
+    color: #f44336;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.03); /* Very subtle text shadow */
+  }
+  
+  .book-card button, .book-card-admin button,
+  .announcement-section button,
+  .book-borrow-form button,
+  .modal-content button,
+  button {
+    background: linear-gradient(to bottom, #e6e6fa, #dcd0ff); /* Light to medium light true lavender */
+    color: #333; /* Darker text */
+    border: none;
+    border-radius: 10px;
+    padding: 14px 22px;
+    cursor: pointer;
+    font-size: 1.1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .book-card button:hover, .book-card-admin button:hover,
+  .announcement-section button:hover,
+  .book-borrow-form button:hover,
+  .modal-content button:hover,
+  button:hover {
+    background: linear-gradient(to bottom, #dcd0ff, #e6e6fa); /* Medium light to light true lavender on hover */
+    color: #8a2be2; /* Medium true lavender on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card-admin .delete-button {
+    background: linear-gradient(to bottom, #71f4e0, #a0fbe4); /* Hot pink to deep pink for delete (contrast) */
+    color: #fff;
+  }
+  
+  .book-card-admin .delete-button:hover {
+    background: linear-gradient(to bottom, #9afbe0, #b6f4e0); /* Deeper pink on hover */
+  }
+  
+  .book-history {
+    padding: 30px;
+  }
+  
+  .book-history h3 {
+    color: #8a2be2; /* Medium true lavender heading */
+    border-bottom: 2px solid #dcd0ff; /* Light true lavender border */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+  }
+  
+  .borrower-card {
+    border: 1px solid #e6e6fa; /* Light lavender border */
+    background-color: #f8f8ff; /* Very light gray background */
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+  }
+  
+  .borrower-card p {
+    margin: 8px 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .announcement-section {
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #e6e6fa; /* Light lavender border */
+    background-color: #f8f8ff; /* Very light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+  }
+  
+  .announcement-section h3 {
+    color: #8a2be2; /* Medium true lavender heading */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+  }
+  
+  .announcement-section textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle inner shadow */
+  }
+  
+  .announcement-section button {
+    background: linear-gradient(to bottom, #e6e6fa, #dcd0ff); /* Light to medium light true lavender */
+    color: #333; /* Darker text */
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly lighter overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    position: relative;
+    min-width: 400px;
+  }
+  
+  .modal-close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #777;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  
+  .modal-close-button:hover {
+    opacity: 1;
+  }
+  
+  /* Book Borrow Form Styling */
+  .book-borrow-form h2 {
+    color: #8a2be2; /* Medium true lavender heading */
+    margin-bottom: 22px;
+    font-size: 2em;
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.03); /* Very subtle text shadow */
+  }
+  
+  .book-borrow-form div {
+      margin-bottom: 15px;
+  }
+  
+  .book-borrow-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: bold;
+  }
+  
+  .book-borrow-form input[type='text'],
+  .book-borrow-form input[type='date'] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle inner shadow */
+      font-size: 1.1em;
+  }
+  
+  .book-borrow-form button {
+      background: linear-gradient(to bottom, #e6e6fa, #dcd0ff); /* Light to medium light true lavender */
+      color: #333; /* Darker text */
+      border: none;
+      border-radius: 10px;
+      padding: 14px 22px;
+      cursor: pointer;
+      font-size: 1.1em;
+      margin-top: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+      transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .book-borrow-form button:hover {
+      background: linear-gradient(to bottom, #dcd0ff, #e6e6fa); /* Medium light to light true lavender on hover */
+      color: #8a2be2; /* Medium true lavender on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Existing styles... */
+  
+  .books-list-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  .books-list-container > h2 {
+    width: 100%; /* Make the heading take full width */
+    margin-top: 15px; /* Add some space above the heading */
+  }
+  
+  /* Style the SearchBar input directly for increased width and prettiness */
+  .books-list-container > div > input[type='text'] {
+    padding: 14px 20px; /* Increased padding */
+    border: 1px solid #a8dadc; /* A softer blue border */
+    border-radius: 6px; /* Slightly less rounded */
+    font-size: 1.1em;
+    width: 70%; /* Set a specific width (adjust as needed) */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* A bit more noticeable shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f8ff; /* Light background color */
+  }
+  
+  .books-list-container > div > input[type='text']:focus {
+    outline: none;
+    border-color: #63b3ed; /* A brighter blue on focus */
+    box-shadow: 0 2px 7px rgba(99, 179, 237, 0.3); /* More prominent focus shadow */
+  }
+  
+  .books-list-container > div > input[type='text']::placeholder {
+    color: #c0c0c0; /* A lighter gray for placeholder */
+    font-style: italic; /* Slightly italicized placeholder */
+  }
+  
+  /* Existing global.css styles... */
+  
+  .book-list > div > input[type='text'] { /* More specific to the admin BookList structure */
+    padding: 14px 20px;
+    border: 1px solid #a8dadc;
+    border-radius: 6px;
+    font-size: 1.1em;
+    width: 70%; /* Adjust width as needed */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f8ff;
+    margin-bottom: 15px;
+  }
+  
+  .book-list > div > input[type='text']:focus {
+    outline: none;
+    border-color: #63b3ed;
+    box-shadow: 0 2px 7px rgba(99, 179, 237, 0.3);
+  }
+  
+  .book-list > div > input[type='text']::placeholder {
+    color: #c0c0c0;
+    font-style: italic;
+  }
+  .overdue {
+    color: red;
+    font-weight: bold;
+  }
