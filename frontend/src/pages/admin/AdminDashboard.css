@@ -1,0 +1,42 @@
+.sticky-header {
+    position: fixed; /* Make the element fixed */
+    top: 0; /* Stick it to the top of the viewport */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it span the entire width */
+    background-color: #f8f8f8; /* Add a background color to make it visible */
+    z-index: 100; /* Ensure it stays on top of other content */
+    padding: 10px 20px; /* Add some padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    /* Add any other styles you want for your header */
+  }
+  
+  .sticky-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sticky-header li {
+    margin-right: 20px;
+  }
+  
+  .sticky-header li:last-child {
+    margin-right: 0;
+  }
+  
+  .sticky-header a,
+  .sticky-header button {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .sticky-header button {
+    /* Style your logout button if needed */
+  }
